@@ -1,4 +1,4 @@
-from tethon import TelegramClinet, events
+from telethon import TelegramClinet, events
 
 api_id = 
 api_hash = ''
@@ -9,3 +9,6 @@ rendy = TelegramClient('session', api_id, api_hash)
 async def pingme(event):
   chat = event.get_chat()
   await rendy.edit_message(chat, "ping......")
+
+rendy.start()
+rendy.run.until.disconnected()
